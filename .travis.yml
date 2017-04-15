@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "node"
+  - "6"
+
+install: 
+  - npm run install:all
+
+branches:
+  only:
+  - /^feature\/step/
+
+script:
+  - npm run test:cli
+  - npm run test:api
